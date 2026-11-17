@@ -29,24 +29,18 @@ public class MovieTicketSales {
         System.out.println("--------------------------------");
         
         //Display the column headings
-        System.out.println("Movie\t\tJanuary\tFebruary\tMarch\tTotal Sales");
+        System.out.println("Movie\t\tJanuary\tFebruary March Total Sales");
         
         
-        //Display each movie's monthly sales
-        for (int r = 0; r < ticketSales.length; r++)
-        {
-             System.out.printf("%-15s", movies[r]);
-             
-             for (int c = 0; c < ticketSales[r].length; c++)
-             {
-                  System.out.printf("%-12d", ticketSales[r][c]);
-             }
-             
-             //Calculate the total sales for this movie
-             totalSales[r] = movieTickets.TotalMovieSales(ticketSales[r]);
-             
-              System.out.println(totalSales[r]);
-        }
+        // Display each movie's monthly sales
+        for (int r = 0; r < movies.length; r++) 
+          {
+            // Calculate the total sales for this movie
+            totalSales[r] = movieTickets.TotalMovieSales(ticketSales[r]);
+
+            // Display the movie and its monthly sales
+            System.out.println(movies[r] + "\t" + ticketSales[r][0] + "\t" + ticketSales[r][1] + "\t" + ticketSales[r][2] + "\t" + totalSales[r]);
+          }
         
         //Find the top performing movie
         String topMovie = movieTickets.TopMovie(movies, totalSales);
