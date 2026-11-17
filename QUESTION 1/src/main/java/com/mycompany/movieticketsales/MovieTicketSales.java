@@ -11,6 +11,6 @@ package com.mycompany.movieticketsales;
 public class MovieTicketSales {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }
